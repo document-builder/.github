@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="profile\images\document-builder-logo-under-1mb.jpg" width="720">
+  <img src="images\document-builder-logo-under-1mb.jpg" width="720">
 </p>
 
 <h1 align="center">Document Builder Platform</h1>
