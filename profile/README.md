@@ -1,20 +1,14 @@
-<p align="center">
-  <img src="images\document-builder-logo-under-1mb.jpg" width="720">
-</p>
+# Document Builder Platform
 
-<h1 align="center">Document Builder Platform</h1>
+![Document Builder logo](images/document-builder-logo-under-1mb.jpg)
 
-<p align="center">
 Centralized platform for generating documents in a controlled and reproducible environment.
-</p>
 
-<p align="center">
 A single system that ensures every document is built using the same process, the same environment, and the same formatting rules.
-</p>
 
 ---
 
-# What is Document Builder
+## What is Document Builder
 
 **Document Builder** is a platform designed to standardize document creation across an organization.
 
@@ -29,27 +23,27 @@ Users only prepare the document locally and submit it to the builder.
 
 ---
 
-# Core Principles
+## Core Principles
 
-### Consistency
+## Consistency
 
 All documents follow the same structure, layout and formatting rules.
 
-### Accessibility
+## Accessibility
 
 Employees can generate documents without installing or maintaining a full LaTeX toolchain.
 
-### Centralized Generation
+## Centralized Generation
 
 Documents are compiled by a shared build system to guarantee identical results across environments.
 
 ---
 
-# Architecture Overview
+## Architecture Overview
 
 The platform separates document preparation from document compilation.
 
-```
+```text
 Workstation
    │
    ▼
@@ -71,7 +65,7 @@ LaTeX Build Environment
 PDF Artifact
 ```
 
-### Workflow
+## Workflow
 
 1. User prepares a document locally.
 2. The workstation client submits the document package.
@@ -83,7 +77,7 @@ This architecture ensures that every document is built **the same way every time
 
 ---
 
-# Platform Repositories
+## Platform Repositories
 
 The Document Builder platform is divided into multiple repositories.
 
@@ -139,7 +133,7 @@ Example document project used to:
 
 ---
 
-# Typical Usage
+## Typical Usage
 
 From the user perspective the workflow is simple.
 
@@ -147,14 +141,14 @@ Prepare a document locally and run the builder client.
 
 Example:
 
-```
-build-doc.bat
+```bat
+doc-builder-client.bat submit-and-wait --manifest <path-to-manifest.yaml> --src-dir <path-to-src> --out <path-to-output.pdf>
 ```
 
 or
 
-```
-./build-doc.sh
+```bash
+./doc-builder-client.sh submit-and-wait --manifest <path-to-manifest.yaml> --src-dir <path-to-src> --out <path-to-output.pdf>
 ```
 
 The system will:
@@ -164,9 +158,14 @@ The system will:
 3. build the document
 4. return the generated PDF
 
+For current command reference and full workstation workflow, see:
+
+* `document-builder-client/README.md`
+* `document-builder-doc/docs/workstation/usage.md`
+
 ---
 
-# Goals of the Project
+## Goals of the Project
 
 The Document Builder platform aims to provide:
 
@@ -178,7 +177,7 @@ The Document Builder platform aims to provide:
 
 ---
 
-# Future Directions
+## Future Directions
 
 Planned improvements include:
 
@@ -190,6 +189,6 @@ Planned improvements include:
 
 ---
 
-# License
+## License
 
 This project is intended for internal organizational use unless specified otherwise.
